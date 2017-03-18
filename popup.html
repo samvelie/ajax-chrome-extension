@@ -1,16 +1,18 @@
 <!DOCTYPE HTML>
 
-<html ng-app="myApp">
+<html ng-app="myApp" ng-csp>
   <head>
     <title>Getting Started Extension's Popup</title>
     <link rel="stylesheet" href="style.css">
     <script src="angular.min.js" charset="utf-8"></script>
+    <script src="angular-sanitize.min.js" charset="utf-8"></script>
     <script src="client.js" charset="utf-8"></script>
   </head>
   <body ng-controller="AppController as ac">
     <p>{{ac.message}}</p>
-
-    <img src="https://unsplash.it/200/300/?random">
-
+    <button ng-click="ac.requestData()">Get</button>
+    <p>{{ac.data}}</p>
+    <input ng-model="ac.newData">
+    <button ng-click="ac.sendData()">Post</button>
   </body>
 </html>

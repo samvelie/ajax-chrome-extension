@@ -1,14 +1,20 @@
 {
   "manifest_version": 2,
 
-  "name": "Chrome Extension for Phi Cohort",
-  "description": "This extension is basic.",
-  "version": "1.0",
+  "name": "Taco Extension",
+  "description": "Requesting data",
+  "version": "0.0.1",
 
   "browser_action": {
     "default_icon": "taco.png",
     "default_popup": "popup.html",
     "default_title": "Click on me!!!"
-  }
+  },
+
+  "permissions": [
+  "activeTab",
+  "http://localhost:5555/",
+  "http://*.google.com/"
+]
 
 }
